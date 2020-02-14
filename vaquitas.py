@@ -37,7 +37,7 @@ def dibujarPuente():
 
 while(True):
   cls()
-  print('Apretá Ctrl + C varias veces para salir...')
+  print('Apreta Ctrl + C varias veces para salir...')
   print()
   dibujarPuente()
   for v in vacas:
