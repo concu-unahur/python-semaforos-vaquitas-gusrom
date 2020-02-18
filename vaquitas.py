@@ -6,7 +6,18 @@ import threading
 inicioPuente = 10
 largoPuente = 20
 
-vaquitas=threading.Semaphore(1)
+valor=int(input("Vacas al mismo tiempo: "))
+vaquitas=threading.Semaphore(valor)
+
+class Puente(threading.Thread):
+  def __init__(self,inicio,largo):
+    self.inicioPuente=inicio
+    self.largoPuente=largo
+    self.finPuente=inicio+largo
+
+  def dibujarPuente():
+    print(' ' * inicioPuente + '=' * largoPuente)
+  
 
 class Vaca(threading.Thread):
   def __init__(self):
